@@ -1,9 +1,10 @@
 # Narrative_Edit
 
-Narrative_Edit は、小説執筆に特化した縦書きエディタです。
+Narrative_Edit は、小説執筆向けの縦書き入力エディタです。  
+本文編集（縦書き・原稿用紙）と、プロット整理（登場人物・章メモ・進捗）を1つの画面で扱える構成を目指しています。
 
 ## 主な機能
-- 本格縦書きエディタ（右から左へ列進行）
+- 縦書きエディタ（右から左へ列進行）
 - 原稿用紙グリッド（初期40x40、行数/列数は変更可能）
 - タブ編集（`Ctrl+T` / `Ctrl+W` / `Ctrl+Tab`）
 - プロット情報パネル（概要・登場人物・章メモ・設定資料・進捗分析）
@@ -12,18 +13,21 @@ Narrative_Edit は、小説執筆に特化した縦書きエディタです。
 - プロット単体の保存/読込（`*.plot.json`）
 - PDF書き出し（A4横・40x40・方眼）
 - 検索バー（`Ctrl+F`、`Enter` / `Shift+Enter`）
-- 自動保存とセッション復元（旧版データの移行対応）
+- 自動保存とセッション復元
 
-## スクリーンショット（後日追加）
-以下は画像追加用のプレースホルダです。画像を追加したらパスを置き換えてください。
-
-```md
+## スクリーンショット
+- エディタ全体
 ![Editor](docs/images/editor-overview.png)
-![Plot Panel](docs/images/plot-panel.png)
-![PDF Output](docs/images/pdf-output.png)
-```
 
-`docs/images/` は未作成でも問題ありません。画像追加時に作成してください。
+- 別テーマ表示
+![Editor2](docs/images/editor-overview2.png)
+
+- PDF出力イメージ
+![PDF Output](docs/images/pdf-output.png)
+
+## リリース
+- タグベースでリリースします（例: `v0.1.0`, `v0.2.0`）。
+- GitHub Releases には変更点の要約を記載します。
 
 ## 実行方法
 ```powershell
