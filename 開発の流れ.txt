@@ -1,0 +1,40 @@
+﻿開発環境での流れ（Narrative_Edit / Windows）
+
+前提
+- Python 3.12 以上（現環境 3.14.3 でも動作確認）
+- 作業フォルダ: Narrative_Edit
+
+1. 仮想環境の作成（初回のみ）
+```powershell
+python -m venv .venv
+```
+
+2. 日常の開発作業
+```powershell
+# 仮想環境を有効化
+.\.venv\Scripts\Activate.ps1
+
+# 依存をインストール
+python -m pip install -r requirements.txt
+
+# アプリ起動
+python src\main.py
+```
+
+3. 仕様メモ（UI）
+- UI文言は日本語を既定、設定で英語へ切替可。
+- テーマは `ライトグレー` / `ダークグレー`。
+- メインは縦書き原稿用紙（20x20初期、行数/列数変更可）。
+- 右サイドに小説執筆情報パネルを固定表示。
+
+4. 最低限の確認
+```powershell
+python -m compileall src
+```
+
+5. EXE 再ビルド
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install pyinstaller
+python -m PyInstaller --noconfirm --onefile --windowed --name Narrative_Edit --distpath dist --workpath build src\main.py
+```
