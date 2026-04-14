@@ -43,8 +43,15 @@ python src\main.py
 ```powershell
 .\.venv\Scripts\Activate.ps1
 python -m pip install pyinstaller
-python -m PyInstaller --noconfirm --onefile --windowed --name Narrative_Edit --distpath dist --workpath build src\main.py
+python -m PyInstaller --noconfirm Narrative_Edit.spec
 ```
+
+`dist\Narrative_Edit.exe` が出力されます。
+
+## GitHub Release
+- GitHub で Release を `Publish` すると、Actions の `Release Windows EXE` が走ります。
+- 完了後、その Release の Assets に `Narrative_Edit.exe` が自動追加されます。
+- 既存 Release に後から追加したい場合は、Actions の `workflow_dispatch` から対象タグを指定して再実行できます。
 
 ## ドキュメント
 - 仕様: `docs/specification.md`

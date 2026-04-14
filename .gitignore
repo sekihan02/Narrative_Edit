@@ -15,6 +15,7 @@ venv/
 build/
 dist/
 *.spec
+!Narrative_Edit.spec
 
 # IDE
 .idea/
